@@ -1,16 +1,30 @@
 {
   "name": "exp",
   "version": "1.0.0",
-  "description": "**Concept:** Focusing on *experiences* rather than destinations, though they naturally interrelate.",
+  "description": "Experience-first travel catalog pipeline with curated, source-grounded content",
   "main": "test-italian.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:migrate": "node database/migrate.js up",
+    "db:migrate:status": "node database/migrate.js status",
+    "db:seed": "node database/seed.js",
+    "db:test": "node database/test-cli.js run",
+    "db:test:clean": "node database/test-cli.js clean"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "travel",
+    "experiences",
+    "content-generation",
+    "ai-pipeline"
+  ],
+  "author": "Josh Petersen",
   "license": "ISC",
   "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.92.0"
+    "@anthropic-ai/sdk": "^0.92.0",
+    "pg": "^8.16.3"
   }
 }

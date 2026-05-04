@@ -6,17 +6,10 @@
   "source": "Documented in Naomi Duguid and Jeffrey Alford's 'Seductions of Rice' travel essays and referenced in Patricia Wells's 'The Food Lover's Guide to France' (1987), which describes the cooperative trading culture of Isigny specifically.",
   "id": "france-1",
   "country": "France",
-  "pass2_verified": false,
-  "pass2_verdict": "WEAK",
-  "pass2_verification": {
-    "verdict": "WEAK",
-    "source_recognized": true,
-    "topic_match": "weak",
-    "specificity": "high",
-    "concerns": "Patricia Wells's 'The Food Lover's Guide to France' (1987) is a real and recognized book that plausibly covers Norman dairy culture and Isigny-sur-Mer, which is genuinely famous for AOC butter and crème fraîche. However, 'Seductions of Rice' by Naomi Duguid and Jeffrey Alford is a real book focused on Asian rice cultures, not French Norman dairy markets — its inclusion here is a significant mismatch and raises suspicion about the citation's accuracy. The specific claim of a 'pre-dawn butter and cream auction' at a 'Marché au Beurre' is highly specific and colorful, but this type of wholesale auction is not something commonly documented in food travel literature. Isigny-sur-Mer's cooperative (ISIGNY STE MÈRE) is real and well-documented, but the auction format described sounds romanticized. The dual citation mixing a mismatched source (Seductions of Rice) with a plausible one (Wells) is a pattern sometimes seen in fabricated citations. Even if Wells mentions Isigny cooperatives, the specific pre-dawn Saturday auction claim may be embellished or invented.",
-    "needs_human_check": true
-  },
-  "pass2_timestamp": "2026-05-04T15:28:26.334Z",
+  "pass2_plausible": false,
+  "pass2_verdict": "IMPLAUSIBLE",
+  "pass2_reasoning": "While Isigny-sur-Mer is a genuinely real place with a well-documented AOC designation for butter and crème fraîche, and the town's dairy cooperative heritage is real, the specific claim of a 'Marché au Beurre' operating as a pre-dawn physical auction where buyers smell and taste samples before bidding raises significant red flags. Modern French dairy cooperatives — including Isigny Sainte-Mère, which dominates Isigny production — operate through industrial cooperative structures with contracted pricing, not open-floor haggling auctions. The 'physical auction format' described is characteristic of older commodity markets (like certain fish or livestock auctions) but is not consistent with how AOC dairy cooperatives in Normandy actually function today. The cited sources are also suspicious: 'Seductions of Rice' by Duguid and Alford is a cookbook focused on Asian rice cultures, not Norman dairy — it would be an extremely unlikely source for this specific experience. The combination of a plausible real location with implausible operational details and a clearly misattributed source strongly suggests fabrication built around a real geographic/culinary anchor.",
+  "pass2_timestamp": "2026-05-04T16:49:06.998Z",
   "killed_at_pass": "pass2",
-  "kill_reason": "weak"
+  "kill_reason": "implausible"
 }

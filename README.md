@@ -1,6 +1,12 @@
 # Experience-First Travel Catalog Pipeline
 
-**A 4-pass content generation and verification pipeline for creating curated, source-grounded travel experiences.**
+**A 3-pass content generation pipeline for creating curated, discovery-focused travel experiences.**
+
+## Product Type
+
+This is an **entertainment/discovery product** (like Atlas Obscura or a curated magazine feed), not a guidebook or itinerary planner.
+
+Users browse for inspiration ("oh wow, that exists?"), save interesting experiences, and use them as starting points for future travel. The bar is **plausibility and interest**, not citation-perfect accuracy.
 
 ## Philosophy
 
@@ -8,11 +14,13 @@ Instead of "Where should I go?" → "What do I want to experience?"
 
 The destination becomes a consequence of the experience you're seeking, not the starting point.
 
-This project generates **distinctive, well-documented travel experiences** (food, rituals, seasonal moments) that most travelers don't know exist.
+This project generates **distinctive, plausible travel experiences** (food, rituals, seasonal moments) that most travelers don't know exist.
 
 ---
 
-## The 4-Pass Pipeline
+## The 3-Pass Pipeline
+
+**Simplified for entertainment product** - focuses on plausibility and interest over citation verification.
 
 ### Pass 1: Research (Generate Candidates)
 **Status:** ✅ Complete - 355 experiences generated
@@ -27,9 +35,9 @@ Generates raw experience candidates using Claude Sonnet 4.6.
 **Quality criteria:**
 - Specific moment, ritual, or activity (not "visit the museum")
 - Has clear when/where/with whom
-- Documented in travel writing, not just marketing copy
+- Plausible and real (not invented festivals or rituals)
 - Most travelers don't know it exists
-- Cited source (book, article, documentary, website)
+- Optional: Cited source for context (book, article, documentary, website) - adds flavor but not required for verification
 
 **Generated to date:**
 - Italy: 50 experiences
@@ -47,46 +55,52 @@ Generates raw experience candidates using Claude Sonnet 4.6.
 
 **Total:** 355 raw candidates
 
-### Pass 2: Verification (Check Sources)
-**Status:** 🏗️ In Testing - 20 sample candidates
+### Pass 2: Plausibility Check (Lightweight Filter)
+**Status:** 📋 Ready to build
 
-Validates that cited sources actually support the claims.
+Lightweight check to filter out obvious fabrications without deep source verification.
 
-- **Pass 2A (URL sources):** Fetches page content, verifies claim matches (Haiku 4.5)
-- **Pass 2B (Non-URL sources):** Checks if book/article/documentary plausibly exists and covers topic (Sonnet 4.6)
-- **Output:** `VERIFIED`, `PARTIALLY_VERIFIED`, `UNVERIFIABLE`, `FABRICATED`
-- **Expected survival:** 60-75%
+- **Model:** Sonnet 4.6
+- **Single question:** "Is this experience plausible and real, or did the model invent something that doesn't exist?"
+- **Output:** `PLAUSIBLE`, `IMPLAUSIBLE`
+- **Expected survival:** 75-85%
 
-**Kills:**
-- Fabricated sources
-- Wrong page numbers/citations
-- Generic marketing content that doesn't support specific claims
-- Unverifiable or contradictory content
+**Catches:**
+- Complete fabrications ("daily ice sculpture festival in Naples")
+- Invented festivals, dishes, or rituals that don't exist
+- Implausible timing or geographic mismatches
 
-**Flags for human review:**
-- Obscure but plausible sources
-- Unusually specific claims that are hard to fabricate
+**Doesn't waste time on:**
+- Page number verification
+- URL fetching
+- Source citation accuracy
 
-### Pass 3: Quality Filter (Editorial Critique)
+**Why this is enough:** For an entertainment product, users will do a quick Google search if curious. The bar is "can a curious user confirm this exists?" not "is this citation academically correct?"
+
+### Pass 3: Quality + Writer Persona (Editorial Filter)
 **Status:** 📋 Not yet built
 
-Adversarial critic evaluates if verified experiences are actually interesting.
+Adversarial critic evaluates if plausible experiences are actually interesting enough to ship.
 
 - **Model:** Sonnet 4.6 (or Opus 4.7 for better editorial taste)
-- **Checks:** Is it specific enough? Too touristy? Worth the trip?
+- **Checks:**
+  - Is it interesting enough to earn attention?
+  - Is it specific and distinctive (not generic tourism)?
+  - Does it have the right emotional register?
 - **Output:** `ACCEPT`, `REJECT`, or `REVISE` (with feedback)
-- **Expected survival:** ~60% of Pass 2 survivors
+- **Expected survival:** ~60-70% of Pass 2 survivors
 
-**Also assigns writer persona:**
+**Also assigns writer persona** (determines Pass 4 voice):
 - `travel_writer` - Sensory, immediate, present-tense
 - `food_enthusiast` - Ingredient-focused, technique-aware
 - `religious_scholar` - Contemplative, historical context
 - `sailor` - Maritime, tidal, coastal life
 - `historian` - Layered time, deep continuity
 
-**Revision loop:**
-- If verdict is `REVISE`, Pass 3.5 improves the candidate with specific feedback
+**Pass 3.5 (Revision loop):**
+- If verdict is `REVISE`, improves candidate with specific feedback
 - Revised candidate goes back through Pass 3 critique
+- Max 1 revision attempt per candidate
 
 ### Pass 4: Enrichment (Write in Voice)
 **Status:** 📋 Not yet built
@@ -114,17 +128,16 @@ Takes verified, quality-approved candidates and writes them in editorial voice.
 /exp
   /scripts
     generate-all-countries.js       # Pass 1: Multi-country batch generator
-    pass2_verify.js                 # Pass 2: Verification
+    pass2_plausibility.js           # Pass 2: Plausibility check
     create_test_sample.js           # Helper: Creates 20-sample test set
 
   /prompts
     research.txt                    # Pass 1 prompt template
-    verify_url.txt                  # Pass 2A prompt (URL verification)
-    verify_nonurl.txt               # Pass 2B prompt (non-URL verification)
+    plausibility_check.txt          # Pass 2 prompt (lightweight plausibility)
 
   /data
     /01-research                    # Pass 1 output (raw candidates)
-    /02-verified                    # Pass 2 output (verified candidates)
+    /02-plausible                   # Pass 2 output (plausible candidates)
     /03-quality-passed              # Pass 3 output (quality-approved)
     /04-enriched                    # Pass 4 output (ready to ship)
     /99-killed                      # Rejected candidates (with reasons)
@@ -155,23 +168,22 @@ Generates 30 experiences each for 11 countries (France, Spain, USA, Turkey, Mexi
 node --env-file=../overt-tourism/server/.env test-italian.js
 ```
 
-### Pass 2: Verify Sources
+### Pass 2: Plausibility Check
 
 **Create test sample (20 diverse candidates):**
 ```bash
 node scripts/create_test_sample.js
 ```
 
-**Run verification:**
+**Run plausibility check:**
 ```bash
-node --env-file=../overt-tourism/server/.env scripts/pass2_verify.js
+node --env-file=../overt-tourism/server/.env scripts/pass2_plausibility.js
 ```
 
-Processes all JSON files in `data/01-research/`, outputs to `data/02-verified/` or `data/99-killed/`.
+Processes all JSON files in `data/01-research/`, outputs to `data/02-plausible/` or `data/99-killed/`.
 
 **Review results:**
-- Check survival rate (target: 60-75%)
-- Review candidates flagged for human check
+- Check survival rate (target: 75-85%)
 - Spot-check 5 verdicts manually to calibrate accuracy
 
 ### Pass 3: Quality Filter
@@ -187,20 +199,19 @@ Processes all JSON files in `data/01-research/`, outputs to `data/02-verified/` 
 | Pass | Task | Model | Why |
 |------|------|-------|-----|
 | 1 | Research | Sonnet 4.6 | Knowledge recall, grounded specificity |
-| 2A | URL verification | Haiku 4.5 | Pure comprehension on supplied text |
-| 2B | Non-URL verification | Sonnet 4.6 | Knowledge check; Haiku misses fabrications |
+| 2 | Plausibility check | Sonnet 4.6 | Judgment on whether experience is real or fabricated |
 | 3 | Quality critique | Sonnet 4.6 (or Opus) | Editorial judgment |
 | 3.5 | Revision | Sonnet 4.6 | Same as Pass 3 for consistency |
 | 4 | Voice enrichment | Sonnet 4.6 → Opus 4.7 | Output quality matters most |
 
 **Cost projection (for 500 candidates through full pipeline):**
 - Pass 1 (500 candidates): ~$25
-- Pass 2 (500 verifications): ~$8
-- Pass 3 (350 survivors): ~$10
+- Pass 2 (500 plausibility checks): ~$5
+- Pass 3 (375 survivors @ 75%): ~$12
 - Pass 3.5 (50 revisions): ~$1.50
-- Pass 4 (150 enrichments, Sonnet): ~$5
+- Pass 4 (200 enrichments, Sonnet): ~$7
 
-**Total:** ~$50-60 with Sonnet-heavy stack, ~$100-150 if using Opus for Pass 4.
+**Total:** ~$50 with Sonnet-heavy stack, ~$80-100 if using Opus for Pass 4.
 
 ---
 
@@ -214,13 +225,13 @@ Processes all JSON files in `data/01-research/`, outputs to `data/02-verified/` 
 - Are sources cited properly?
 - Is there good geographic/domain diversity?
 
-### After Pass 2 (Verification)
-🏗️ **In Testing** - 20 samples running
+### After Pass 2 (Plausibility Check)
+📋 **Not yet tested**
 
 **Gate:** Don't proceed to Pass 3 until:
-- Survival rate is 60-75% (if <50%, tune Pass 1 prompt)
+- Survival rate is 75-85% (if <70%, tune Pass 2 prompt)
 - Spot-check 5 verdicts manually - are they accurate?
-- Review "needs human check" flags
+- Fabrications are caught, plausible experiences pass
 
 ### After Pass 3 (Quality)
 📋 **Not yet built**
@@ -244,9 +255,9 @@ Processes all JSON files in `data/01-research/`, outputs to `data/02-verified/` 
 
 ### Phase 1: Validate Pass 2 (Current)
 1. ✅ Create 20 diverse test samples (5 Italy, 5 Mexico, 5 France, 3 China, 2 Thailand)
-2. 🏗️ Run Pass 2 verification
-3. ⏳ Measure survival rate
-4. ⏳ Tune prompts if needed (target: 60-75% survival)
+2. 📋 Build Pass 2 plausibility check
+3. 📋 Run on 20 test samples
+4. 📋 Measure survival rate (target: 75-85%)
 
 ### Phase 2: Build & Validate Pass 3
 5. Build Pass 3 quality critic
@@ -274,35 +285,36 @@ Processes all JSON files in `data/01-research/`, outputs to `data/02-verified/` 
 
 This is how real editorial works - the writer's lens determines the voice, not the geography.
 
-### Why 4 Passes Instead of 1?
+### Why Multiple Passes Instead of 1?
 
 **Pass 1 alone produces:**
 - High volume (~80% of candidates meet surface criteria)
-- But: ~40% have fabricated/wrong citations
-- And: ~30% of verified candidates are boring-but-true
-- Result: Only ~40% are actually shippable
+- But: Some fabricated experiences slip through
+- And: ~30% of real candidates are boring-but-true
+- Result: Only ~50-60% are actually shippable
 
 **Full pipeline produces:**
-- Lower volume (~40-60% survive all passes)
-- But: Every survivor is verified, interesting, and written in voice
+- Lower volume (~50-60% survive all passes)
+- But: Every survivor is plausible, interesting, and written in voice
 - Result: Ship-ready content
 
 The pipeline trades quantity for quality and automation.
 
-### Why Non-URL Sources Are Higher Risk?
+### Why Lightweight Plausibility Over Deep Verification?
 
-URLs can be fetched and checked. Books/articles cannot (without access to full text).
+**Product type determines verification bar:**
 
-The model can fabricate:
-- Specific page numbers that sound authoritative
-- Essay titles in named anthologies
-- Article publication dates
-- Documentary episode numbers
+For a guidebook/itinerary planner, you'd need:
+- Citation verification (page numbers, URLs)
+- Source accuracy checks
+- Cross-referencing multiple sources
 
-**Mitigation:**
-- Use Sonnet 4.6 for Pass 2B (better at spotting implausible sources)
-- Flag obscure sources for human review
-- Monthly source audit on "source_recognized: false" cases
+For an entertainment/discovery product (this project), you need:
+- Plausibility check (is this real or fabricated?)
+- Interest filter (is this worth attention?)
+- Quality enrichment (is it well-written?)
+
+**The user will verify if curious:** A quick Google search confirms "Palio della Riva truffle auction" exists. That's enough for a discovery product. We don't need to verify Matt Goulding's book pages 41-47 are accurate.
 
 ---
 
@@ -310,18 +322,19 @@ The model can fabricate:
 
 ### Completed
 - ✅ Pass 1: Generated 355 experiences across 12 countries
-- ✅ Pass 2: Built verification system (2A: URL, 2B: Non-URL)
 - ✅ Test infrastructure: 20-sample test set, directory structure
+- ✅ Documentation updated to reflect entertainment product approach
 
 ### In Progress
-- 🏗️ Pass 2 validation: Running on 20 test samples to measure survival rate
+- 🏗️ Building lightweight Pass 2 (plausibility check)
 
 ### Next Steps
-1. Review Pass 2 results, tune if needed
-2. Build Pass 3 (quality critic with writer persona tagging)
-3. Test Pass 3 on Pass 2 survivors
-4. Scale: Run all 355 through Pass 2 → Pass 3
-5. Build Pass 4 (voice enrichment with 5 persona templates)
+1. Build Pass 2 plausibility check script
+2. Test on 20 samples, tune if needed
+3. Build Pass 3 (quality critic with writer persona tagging)
+4. Test Pass 3 on Pass 2 survivors
+5. Scale: Run all 355 through Pass 2 → Pass 3
+6. Build Pass 4 (voice enrichment with 5 persona templates)
 
 ---
 
@@ -338,18 +351,14 @@ The model can fabricate:
 }
 ```
 
-### Pass 2 Output (Verified)
+### Pass 2 Output (Plausibility Checked)
 ```json
 {
   // ... all Pass 1 fields ...
-  "pass2_verified": true,
+  "pass2_plausible": true,
   "pass2_verdict": "PLAUSIBLE",
-  "pass2_verification": {
-    "source_recognized": true,
-    "topic_match": "strong",
-    "specificity": "high",
-    "needs_human_check": false
-  }
+  "pass2_reasoning": "The Alba white truffle fair is well-documented; pre-dawn auction culture among hunters and restaurateurs is plausible and specific",
+  "pass2_timestamp": "2026-05-04T15:30:00Z"
 }
 ```
 
@@ -390,12 +399,14 @@ The pipeline developed here may eventually feed content into overt-tourism's cat
 
 ## References
 
-The 4-pass pipeline design comes from a conversation about building scalable, verifiable content generation systems. Key insights:
+The multi-pass pipeline design comes from a conversation about building scalable content generation systems. Key insights:
 
 - **Pass 1 (Research):** Use explicit "fewer is fine" instruction to prevent padding
-- **Pass 2 (Verification):** Most critical pass - fabrications caught here prevent credibility loss
+- **Pass 2 (Plausibility):** Lightweight check catches fabrications without over-engineering verification
 - **Pass 3 (Quality):** Adversarial critic does most quality work; boring candidates die here
 - **Pass 4 (Enrichment):** Output quality matters most - worth spending on Opus if needed
+
+**Product type determines pipeline complexity:** Entertainment/discovery products need plausibility + interest, not citation-perfect verification.
 
 ---
 

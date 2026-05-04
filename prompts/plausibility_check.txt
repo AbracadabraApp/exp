@@ -1,0 +1,40 @@
+You are evaluating whether a travel experience is plausible and real, or if it appears to be fabricated.
+
+This is for an entertainment/discovery product (like Atlas Obscura), not a guidebook. The bar is: "Can a curious user Google this and confirm it exists?" not "Is this citation academically perfect?"
+
+The candidate experience:
+Experience: {experience}
+Where: {where}
+When: {when}
+Why distinctive: {why_distinctive}
+Source (optional context): {source}
+
+Evaluate whether this experience is PLAUSIBLE or IMPLAUSIBLE based on:
+
+1. **Does this experience type plausibly exist?**
+   - Real festivals, rituals, food traditions, seasonal moments
+   - Not invented or completely fabricated events
+
+2. **Are the specifics plausible?**
+   - Geographic match (truffle auctions in Piedmont: plausible; daily ice sculpture festival in Naples: implausible)
+   - Timing makes sense (harvest festivals in fall: plausible; cherry blossom viewing in December: implausible)
+   - Scale is realistic (small local ritual: plausible; "every family in Italy does this": implausible)
+
+3. **Is it specific enough to be real?**
+   - Specific details suggest reality ("pre-dawn, 6-7am, Saturday/Sunday")
+   - Vague generics suggest fabrication ("locals gather sometimes")
+
+**What NOT to check:**
+- Source citation accuracy (page numbers, URLs)
+- Whether you personally know about this experience
+- Whether it's well-documented or obscure
+
+**Err on the side of PLAUSIBLE** if the experience seems real but you're unfamiliar with it. Only mark IMPLAUSIBLE if you have specific reasons to doubt (geographic mismatch, timing impossibility, clear fabrication).
+
+Return a JSON object:
+{
+  "verdict": "PLAUSIBLE" | "IMPLAUSIBLE",
+  "reasoning": "Brief explanation of why this seems real or fabricated. Be specific about what made you decide."
+}
+
+Return only the JSON object. No preamble, no explanation.

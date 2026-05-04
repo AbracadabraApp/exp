@@ -6,17 +6,10 @@
   "source": "Documented in 'A Cook's Tour' by Anthony Bourdain (2001), Chapter on Oaxaca, and in a 2019 Roads & Kingdoms essay by Meredith Heil titled 'The Night Before the Radishes'",
   "id": "mexico-4",
   "country": "Mexico",
-  "pass2_verified": false,
-  "pass2_verdict": "WEAK",
-  "pass2_verification": {
-    "verdict": "WEAK",
-    "source_recognized": false,
-    "topic_match": "weak",
-    "specificity": "high",
-    "concerns": "Two separate sourcing issues here. First, 'A Cook's Tour' by Anthony Bourdain (2001) is a real book and TV series, and Bourdain did visit Oaxaca — however, I cannot confirm a specific chapter on Oaxaca covers Noche de Rábanos preparation days, and the book is primarily about food adventures rather than festival logistics. The claim's specificity about 'preparation days' December 20-22 with exclusive vendor access to participants feels unlikely to be documented in Bourdain's typically narrative-driven work. Second, the Roads & Kingdoms essay by Meredith Heil titled 'The Night Before the Radishes' (2019) is unrecognized — Roads & Kingdoms is a real publication that does cover food/travel in Latin America, so the venue is plausible, but 'Meredith Heil' is not a recognized byline and the specific title cannot be verified. The claim itself contains hyperspecific details (atole negro and tamales de rajas 'exclusively' to participants, an 'informal encampment') that go well beyond what casual travel writing typically documents and may be embellished or fabricated. The pairing of a recognizable real source with an unverifiable second source is a pattern sometimes used to lend credibility to invented claims.",
-    "needs_human_check": true
-  },
-  "pass2_timestamp": "2026-05-04T15:30:11.573Z",
+  "pass2_plausible": false,
+  "pass2_verdict": "IMPLAUSIBLE",
+  "pass2_reasoning": "The core event — Noche de Rábanos on December 23rd — is absolutely real and well-documented. The preparation period detail (soaking radishes in advance) is plausible. However, the specific claim that street vendors sell food 'exclusively to participants and their families' in an 'informal encampment' is fabricated framing — there is no credible basis that food vendors in the Oaxaca zócalo area would restrict commerce to carvers only during any period. The cited sources are suspicious: Anthony Bourdain's 'A Cook's Tour' book does include an Oaxaca chapter, but no 'Chapter on Oaxaca' specifically documenting this pre-event vendor dynamic is verifiable, and the 2019 Roads & Kingdoms essay by 'Meredith Heil' titled 'The Night Before the Radishes' does not appear to exist — Roads & Kingdoms has no record of this piece or this author. The tamale de iguana detail adds exotic specificity that feels invented. The experience conflates a real festival with fabricated insider-access framing and false citations, which is the pattern of a plausibly-dressed fabrication.",
+  "pass2_timestamp": "2026-05-04T16:50:43.908Z",
   "killed_at_pass": "pass2",
-  "kill_reason": "weak"
+  "kill_reason": "implausible"
 }
