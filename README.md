@@ -322,19 +322,18 @@ For an entertainment/discovery product (this project), you need:
 
 ### Completed
 - ✅ Pass 1: Generated 355 experiences across 12 countries
+- ✅ Pass 2: Built and tested plausibility check (75% survival rate)
 - ✅ Test infrastructure: 20-sample test set, directory structure
 - ✅ Documentation updated to reflect entertainment product approach
-
-### In Progress
-- 🏗️ Building lightweight Pass 2 (plausibility check)
+- ✅ Database schema + migration for pipeline integration
 
 ### Next Steps
-1. Build Pass 2 plausibility check script
-2. Test on 20 samples, tune if needed
-3. Build Pass 3 (quality critic with writer persona tagging)
-4. Test Pass 3 on Pass 2 survivors
-5. Scale: Run all 355 through Pass 2 → Pass 3
-6. Build Pass 4 (voice enrichment with 5 persona templates)
+1. Build Pass 3 (quality critic with writer persona tagging)
+2. Test Pass 3 on Pass 2 survivors (~12-15 expected from 20 samples)
+3. Build Pass 4 (voice enrichment with 5 persona templates)
+4. Scale: Run all 355 through Pass 2 → Pass 3 → Pass 4
+5. Import enriched cards to database
+6. Editorial review + publish
 
 ---
 
@@ -386,6 +385,25 @@ For an entertainment/discovery product (this project), you need:
 
 ---
 
+## Database Integration
+
+The pipeline outputs are designed to populate a PostgreSQL database for the overt-tourism app.
+
+**Database documentation:**
+- `database/SETUP.md` - Setup guide for PostgreSQL + migrations
+- `database/PIPELINE_INTEGRATION.md` - How pipeline data flows into database
+- `database/schema.sql` - Full schema with cards table
+- `database/migrations/002_pipeline_metadata.sql` - Pipeline tracking columns
+
+**Key features:**
+- Single `cards` table holds both experience-cards and list-cards
+- Pipeline metadata columns track progress through Pass 1→2→3→4
+- `writer_type` column stores Pass 3 persona assignment
+- `status` field tracks: `draft` → `pass2_plausible` → `pass3_approved` → `ready` → `published`
+- Helper views (`pipeline_progress`, `rejected_cards_analysis`) for monitoring
+
+---
+
 ## Related Projects
 
 This is a standalone experiment in the `/exp` directory, separate from but related to:
@@ -393,7 +411,7 @@ This is a standalone experiment in the `/exp` directory, separate from but relat
 - **overt-tourism** - iOS app + Node.js/Hono backend for travel catalog browsing
 - **MovieGenius** - Movie discovery app with Claude-enriched content
 
-The pipeline developed here may eventually feed content into overt-tourism's catalog.
+The pipeline developed here feeds content into overt-tourism's catalog via the database.
 
 ---
 
