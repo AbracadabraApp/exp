@@ -1,0 +1,22 @@
+{
+  "experience": "Participating in the pre-dawn monk alms-giving (tak bat) in Luang Prabang-style practice as documented in Chiang Mai's Wang Kwai village, where monks from Wat Phra That Doi Suthep's satellite communities walk a specific rice-field route at approximately 5:30 AM — distinct from the heavily touristed Chiang Mai city version",
+  "where": "Wang Kwai village road, outskirts of Chiang Mai, near Doi Suthep",
+  "when": "Daily, approximately 5:30 AM; most authentic October–February dry season",
+  "why_distinctive": "Austin Bush's 'Food & Cooking of Thailand' and his longform work for Roads & Kingdoms document how the village-route tak bat contrasts sharply with the commercialized city-center version — locals here still use handwoven bamboo containers, and tourists almost never appear",
+  "source": "Austin Bush, Roads & Kingdoms, 'The Other Side of Chiang Mai' (2016); cross-referenced in Lonely Planet Thailand author notes edition 17",
+  "id": "thailand-1",
+  "country": "Thailand",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": false,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Austin Bush is a real travel writer and photographer known for Southeast Asia food and travel coverage, and Roads & Kingdoms is a real publication — so both components exist. However, 'The Other Side of Chiang Mai' (2016) cannot be confirmed as a specific Roads & Kingdoms article, and the cross-reference to 'Lonely Planet Thailand author notes edition 17' is a suspicious citation format — LP author notes are not typically published as standalone citable documents. The specific claim about Wang Kwai village, a rice-field route, monks from Wat Phra That Doi Suthep satellite communities, and a 5:30 AM timing is highly granular and verifiable in principle, but Wang Kwai is a real area near Doi Suthep, so the geographic detail is not implausible. The Luang Prabang-style framing and contrast with the touristy city version is a recognizable travel writing trope. The combination of a plausible-but-unverifiable Roads & Kingdoms article plus a dubiously cited LP 'author notes' source raises concern about fabrication or embellishment of the citation chain. The core experience (rural tak bat near Doi Suthep) is culturally plausible; the sourcing is not clearly credible.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:30:27.359Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

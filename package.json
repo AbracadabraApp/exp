@@ -1,0 +1,16 @@
+{
+  "name": "exp",
+  "version": "1.0.0",
+  "description": "**Concept:** Focusing on *experiences* rather than destinations, though they naturally interrelate.",
+  "main": "test-italian.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.92.0"
+  }
+}

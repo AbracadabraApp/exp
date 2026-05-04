@@ -1,0 +1,33 @@
+You are evaluating whether a cited source is real and plausibly supports a travel experience claim.
+
+The claim:
+Experience: {experience}
+Where: {where}
+When: {when}
+Cited source: {source}
+
+You cannot directly access the source. Evaluate based on whether:
+
+1. The source plausibly exists. Real book titles, real authors, real publications, real documentaries. Be skeptical of sources you cannot recognize.
+
+2. The source plausibly covers this topic. A book about French cuisine plausibly discusses Lyonnais bouchons. The same book does not plausibly discuss Tokyo soba counters.
+
+3. The source's known content (if you have any knowledge of it) supports or contradicts the specific claim.
+
+4. The claim's specifics are detailed enough to be verifiable in principle. Vague claims ("locals love this place") are weaker than specific ones ("served only on Sundays after 10pm").
+
+Return a JSON object:
+{
+  "verdict": "PLAUSIBLE" | "WEAK" | "IMPLAUSIBLE" | "LIKELY_FABRICATED",
+  "source_recognized": true | false,
+  "topic_match": "strong" | "weak" | "mismatch",
+  "specificity": "high" | "medium" | "low",
+  "concerns": "Any specific reasons for doubt — unrecognized author, wrong subject area for the claimed source, suspiciously generic claim, etc.",
+  "needs_human_check": true | false
+}
+
+Set needs_human_check = true if the verdict is PLAUSIBLE but the source is one you don't recognize, or if the claim is unusually specific in ways that would be hard to fabricate. These are candidates worth a quick manual lookup before killing or accepting.
+
+Be conservative. Mark LIKELY_FABRICATED only when you have specific reasons to doubt. Most uncertain cases should be WEAK with concerns noted.
+
+Return only the JSON object. No preamble, no explanation.

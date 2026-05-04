@@ -1,0 +1,22 @@
+{
+  "experience": "Eating at the specific pre-dawn boat noodle market inside Wat Yai Chai Mongkhon's monastery grounds in Ayutthaya, where vendors set up only on Buddhist holy days (wan phra) and serve a fermented blood-broth boat noodle version that does not appear on the tourist circuit",
+  "where": "Wat Yai Chai Mongkhon temple grounds, Ayutthaya",
+  "when": "Buddhist lunar holy days (wan phra), approximately every 7–8 days, 4:00–6:30 AM only",
+  "why_distinctive": "Documented by David Thompson in 'Thai Food' (2002, pp. 38–40) when describing regional boat noodle traditions tied to temple market culture; Thompson notes that monastery-ground food markets on wan phra are a disappearing format most visitors never encounter",
+  "source": "David Thompson, 'Thai Food,' Pavilion Books, 2002, pp. 38–40",
+  "id": "thailand-2",
+  "country": "Thailand",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": true,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "David Thompson's 'Thai Food' (Pavilion Books, 2002) is a real and well-recognized cookbook/culinary reference, so the source itself is legitimate. However, the book is primarily a cookbook with cultural and historical background on Thai cuisine broadly — it is not a travel guide or market directory. Pages 38–40 would fall in early introductory/cultural sections, unlikely to contain hyper-specific logistical details about a pre-dawn market operating only on wan phra inside a specific temple's grounds in Ayutthaya. The claim's specifics (fermented blood-broth variant, 4–6:30 AM timing, Buddhist holy day schedule, specific temple location) are operationally detailed in a way that exceeds what a cookbook typically documents. The book does discuss boat noodles and Thai food culture, so topical overlap exists, but the precise market logistics described would be unusual content for pp. 38–40 of this work. The claim may be drawing on real cultural knowledge about Thailand while falsely attributing hyper-specific market details to this source.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:30:34.972Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

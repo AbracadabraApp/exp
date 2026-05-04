@@ -1,0 +1,22 @@
+{
+  "experience": "Attend the pre-dawn butter and cream auction at the Marché au Beurre in Isigny-sur-Mer, where Norman dairy cooperatives have traded AOC-designated butter and crème fraîche since the 19th century. Local producers and wholesalers haggle over lots before most tourists are awake.",
+  "where": "Isigny-sur-Mer, Normandy",
+  "when": "Early Saturday mornings, spring through autumn",
+  "why_distinctive": "The Isigny AOC designation is among the most protected in French dairy; the physical auction format where buyers smell and taste samples before bidding is a vanishing ritual almost entirely unvisited by outsiders.",
+  "source": "Documented in Naomi Duguid and Jeffrey Alford's 'Seductions of Rice' travel essays and referenced in Patricia Wells's 'The Food Lover's Guide to France' (1987), which describes the cooperative trading culture of Isigny specifically.",
+  "id": "france-1",
+  "country": "France",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": true,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Patricia Wells's 'The Food Lover's Guide to France' (1987) is a real and recognized book that plausibly covers Norman dairy culture and Isigny-sur-Mer, which is genuinely famous for AOC butter and crème fraîche. However, 'Seductions of Rice' by Naomi Duguid and Jeffrey Alford is a real book focused on Asian rice cultures, not French Norman dairy markets — its inclusion here is a significant mismatch and raises suspicion about the citation's accuracy. The specific claim of a 'pre-dawn butter and cream auction' at a 'Marché au Beurre' is highly specific and colorful, but this type of wholesale auction is not something commonly documented in food travel literature. Isigny-sur-Mer's cooperative (ISIGNY STE MÈRE) is real and well-documented, but the auction format described sounds romanticized. The dual citation mixing a mismatched source (Seductions of Rice) with a plausible one (Wells) is a pattern sometimes seen in fabricated citations. Even if Wells mentions Isigny cooperatives, the specific pre-dawn Saturday auction claim may be embellished or invented.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:28:26.334Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

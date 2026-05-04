@@ -1,0 +1,20 @@
+{
+  "experience": "Watching and eating at a 'flowing water table' (liu shui xi) village banquet during a rural Hakka wedding in Meizhou, where a rotating team of volunteer cooks feeds hundreds of guests over 6 hours at long outdoor tables",
+  "where": "Rural Meizhou Prefecture, Guangdong Province",
+  "when": "Wedding season peaks October–November and February–March; requires connection through a local host",
+  "why_distinctive": "The liu shui xi is a living communal institution where the same family recipes are cooked by rotating neighbor-volunteers. The social architecture — who cooks, who serves, the seating hierarchy — is a functioning kinship map. It is almost entirely undocumented in English-language tourism.",
+  "source": "Described in detail in Eugene Anderson's 'The Food of China' (1988, Yale University Press); contemporary accounts appear in Carolyn Phillips' writings and in a 2017 MUNCHIES/Vice video documentary on Hakka food. NOTE: verify the MUNCHIES documentary title independently.",
+  "id": "china-3",
+  "country": "China",
+  "pass2_verified": true,
+  "pass2_verdict": "PLAUSIBLE",
+  "pass2_verification": {
+    "verdict": "PLAUSIBLE",
+    "source_recognized": true,
+    "topic_match": "strong",
+    "specificity": "high",
+    "concerns": "Eugene Anderson's 'The Food of China' (1988, Yale University Press) is a real and recognized academic work that covers regional Chinese food traditions including Hakka cuisine — this source is plausible and topic-appropriate. Carolyn Phillips is a real food writer known for Chinese regional cuisine coverage. The MUNCHIES/Vice documentary is flagged with a caveat to verify independently, which is honest and appropriate — MUNCHIES did produce Hakka-related food content but the specific 2017 documentary title cannot be confirmed without direct access. The 'liu shui xi' (flowing water banquet) is a well-documented Hakka cultural tradition, and the specific details (6 hours, volunteer cooks, outdoor tables, wedding context, Meizhou) are consistent with known descriptions of this practice. The seasonal timing claim is specific and plausible. The main uncertainty is whether Anderson's 1988 book describes this specific practice in sufficient detail, and whether the MUNCHIES documentary exists as described — the citation itself flags this uncertainty.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:28:18.542Z"
+}

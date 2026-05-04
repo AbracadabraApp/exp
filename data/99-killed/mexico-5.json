@@ -1,0 +1,22 @@
+{
+  "experience": "Attend a velada (overnight vigil feast) meal at a Zapotec household in the Sierra Juárez during a tequio community workday, where the family hosting workers prepares a sequence of seven dishes including amarillo de espinazo and black bean tamales served on banana leaves directly on the ground, with mezcal poured from a shared gourd",
+  "where": "Sierra Juárez mountain villages, particularly around Ixtlán de Juárez or Capulálpam de Méndez, Oaxaca",
+  "when": "Tequio workdays are called irregularly; most common before planting season (March–April) and after harvest (October–November); access requires a personal introduction through a community member",
+  "why_distinctive": "Tequio is a pre-Hispanic communal labor obligation; the feast that accompanies it is not performative or tourist-facing — the specific dish sequence and shared-gourd mezcal ritual are described as carrying ceremonial weight distinct from ordinary meals",
+  "source": "Detailed in 'Oaxaca Journal' by Oliver Sacks (2002), pp. 88–93, where Sacks describes attending a tequio feast through a botanical guide contact, and supplemented by ethnographic detail in Cynthia Cone and Andrea Steinberg's 'Secrets of Salsa' research notes (cited in Kennedy's 'Oaxaca al Gusto')",
+  "id": "mexico-5",
+  "country": "Mexico",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": true,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Oliver Sacks' 'Oaxaca Journal' (2002) is a real book about a pteridological (fern-focused) trip to Oaxaca, and it does touch on local culture and food in passing. However, the claim that pages 88–93 contain a detailed account of attending a tequio feast with a seven-dish sequence including specific dishes like 'amarillo de espinazo' and black bean tamales served on banana leaves is not consistent with the book's known focus and depth — Sacks was a neurologist writing about ferns, not an ethnographer of Zapotec food culture. The book is relatively short and impressionistic, making detailed ethnographic food documentation on those pages implausible. The second source, 'Secrets of Salsa' by Cone and Steinberg cited in Kennedy's 'Oaxaca al Gusto,' is a suspicious double-citation — Diana Kennedy's 'Oaxaca al Gusto' (2010) is real, but 'Secrets of Salsa' is not a recognized academic work, and citing research notes within another book's citations is an unusual and hard-to-verify chain. The combination of a loosely relevant real source (Sacks) with an unrecognizable secondary source suggests possible fabrication or significant embellishment of the citation.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:30:19.477Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

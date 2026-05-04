@@ -1,0 +1,13 @@
+node_modules/
+.env
+*.log
+
+# Don't commit large generated data files
+*.json
+!package.json
+!package-lock.json
+
+# But do commit the test samples for reference
+!data/01-research/*.json
+!data/02-verified/*.json
+!data/99-killed/*.json

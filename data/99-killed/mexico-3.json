@@ -1,0 +1,22 @@
+{
+  "experience": "Participate in a tepache fermentation session with a pulquería family in Milpa Alta, where the borough's chirimoya and pineapple tepache is made in large clay vessels buried partially in the ground, and visitors are invited to stir and taste across a 72-hour fermentation window during the harvest festival",
+  "where": "Milpa Alta borough, southern Mexico City — specifically around San Pedro Atocpan during its annual mole and fermented beverage festival",
+  "when": "Late October through early November during the Feria del Mole",
+  "why_distinctive": "Milpa Alta's semi-buried clay fermentation method differs from the plastic-bucket tepache sold commercially; the family process is documented as functionally unchanged from early colonial descriptions and is rarely accessible to outsiders outside the festival context",
+  "source": "Described in 'Mexico City: An Opinionated Guide for the Curious Traveler' by Nicholas Gilman (2016), pp. 201–203, with fermentation detail drawn from his conversations with the Ramírez family producers",
+  "id": "mexico-3",
+  "country": "Mexico",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": false,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Nicholas Gilman is a real food writer known for his work on Mexico City street food and restaurants, but I cannot verify a book titled 'Mexico City: An Opinionated Guide for the Curious Traveler' (2016). His known work includes 'Good Food in Mexico City' (2007, 2012). The title may be fabricated or misattributed. Additionally, the claim is unusually specific — buried clay vessels, 72-hour fermentation window, chirimoya-pineapple combination, named Ramírez family, pp. 201–203 — which could indicate fabrication with plausible-sounding detail, or genuine recall. Tepache is typically pineapple-based, and chirimoya is an unusual addition not commonly documented in tepache traditions. The Feria del Mole in San Pedro Atocpan is a real annual event in Milpa Alta, which lends geographic plausibility. However, the specific book title and content cannot be verified, and the granularity of the fermentation detail (stirring sessions across a 72-hour window, partially buried vessels) sounds potentially embellished or constructed.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:30:03.377Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

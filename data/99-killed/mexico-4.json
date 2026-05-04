@@ -1,0 +1,22 @@
+{
+  "experience": "Join the Noche de Rábanos carving competition preparation in the days before December 23rd, when Oaxacan families begin soaking and selecting giant radishes, and street vendors sell atole negro and tamales de rajas exclusively to participants and their families in an informal encampment around the zócalo",
+  "where": "Oaxaca City zócalo and surrounding streets, particularly Calle Macedonio Alcalá",
+  "when": "December 20–22 (preparation days before the December 23 public event)",
+  "why_distinctive": "The food sold during the preparation nights is informal, family-facing provisioning rather than tourist commerce — the tamale and atole vendors are there for the carvers, not visitors, and the varieties (including tamale de iguana in some stalls) are not available in tourist-facing markets",
+  "source": "Documented in 'A Cook's Tour' by Anthony Bourdain (2001), Chapter on Oaxaca, and in a 2019 Roads & Kingdoms essay by Meredith Heil titled 'The Night Before the Radishes'",
+  "id": "mexico-4",
+  "country": "Mexico",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": false,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Two separate sourcing issues here. First, 'A Cook's Tour' by Anthony Bourdain (2001) is a real book and TV series, and Bourdain did visit Oaxaca — however, I cannot confirm a specific chapter on Oaxaca covers Noche de Rábanos preparation days, and the book is primarily about food adventures rather than festival logistics. The claim's specificity about 'preparation days' December 20-22 with exclusive vendor access to participants feels unlikely to be documented in Bourdain's typically narrative-driven work. Second, the Roads & Kingdoms essay by Meredith Heil titled 'The Night Before the Radishes' (2019) is unrecognized — Roads & Kingdoms is a real publication that does cover food/travel in Latin America, so the venue is plausible, but 'Meredith Heil' is not a recognized byline and the specific title cannot be verified. The claim itself contains hyperspecific details (atole negro and tamales de rajas 'exclusively' to participants, an 'informal encampment') that go well beyond what casual travel writing typically documents and may be embellished or fabricated. The pairing of a recognizable real source with an unverifiable second source is a pattern sometimes used to lend credibility to invented claims.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:30:11.573Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

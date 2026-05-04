@@ -1,0 +1,22 @@
+{
+  "experience": "Watch and participate in the early-morning mise en place at a bouchon lyonnais before service, where the Mères Lyonnaises tradition of the female cook-owner (the 'mère') still persists in a handful of establishments — specifically the ritual salting and slow-rendering of quenelle batter by hand.",
+  "where": "Traditional bouchons in the Presqu'île neighborhood, Lyon, particularly Rue Mercière",
+  "when": "Weekday mornings, roughly 6–9 a.m., by arrangement with the owner",
+  "why_distinctive": "The mères tradition is frequently romanticized but rarely observed firsthand. Hand-worked quenelle preparation predates industrial mixers and only a few bouchons maintain it. Journalist accounts note it takes years of relationship-building to be allowed into the kitchen.",
+  "source": "Documented extensively by food journalist John Thorne in 'Serious Pig' (1996) and by Lindsey Tramuta in 'The New Paris' (2017), which cites specific bouchons preserving pre-service kitchen ritual.",
+  "id": "france-3",
+  "country": "France",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": true,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Both sources are real and recognized. John Thorne's 'Serious Pig' (1996) is a real book focused on American regional food traditions (New England, pork, beans, etc.) — it is not primarily about French cuisine and would be an unusual source for Lyon bouchon documentation. Lindsey Tramuta's 'The New Paris' (2017) is real and covers Parisian food culture, not Lyon specifically; it focuses on contemporary Paris trends rather than traditional Lyonnais bouchons. The claim that Tramuta 'cites specific bouchons preserving pre-service kitchen ritual' in a book about Paris is implausible. The pairing of these two sources together for this specific Lyon claim appears misattributed or fabricated — neither book is a natural fit for this topic. The experience itself (early-morning mise en place participation at a Lyon bouchon) is culturally plausible, but the specific citation of quenelle batter ritual being 'documented extensively' by Thorne in 'Serious Pig' is highly suspicious.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:28:43.628Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

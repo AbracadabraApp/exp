@@ -1,0 +1,22 @@
+{
+  "experience": "Attending the pre-dawn wholesale market at Huangsha Aquatic Products Market, where restaurants negotiate live seafood purchases, and eating congee with workers at 4am in the surrounding stalls",
+  "where": "Huangsha Aquatic Products Market, Liwan District, Guangzhou",
+  "when": "3am–6am daily, most active Tuesday–Saturday",
+  "why_distinctive": "The working-meal culture around wholesale markets — congee shops serving dock workers before dawn — is a documented layer of Cantonese food life distinct from any restaurant experience. The negotiation rituals between buyers and fishmongers follow conventions invisible to leisure tourists.",
+  "source": "Documented in Fuchsia Dunlop's 'Shark's Fin and Sichuan Pepper' (2008, Norton) and corroborated in multiple threads on r/Chinavisa and r/movingtochina; also referenced in Lucky Peach issue #1 (2011) in the context of Cantonese market culture. NOTE: I cannot verify exact page numbers — treat as a direction for your own verification.",
+  "id": "china-1",
+  "country": "China",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": true,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Fuchsia Dunlop's 'Shark's Fin and Sichuan Pepper' (2008, Norton) is a real, recognized book — a memoir of Dunlop's culinary education in China. However, the book focuses primarily on Sichuan cuisine and her experiences in Chengdu, with some broader Chinese food coverage. It is not primarily a Cantonese or Guangzhou-focused text, making it an unlikely detailed source for a specific Guangzhou wholesale market experience. Lucky Peach issue #1 (2011) is a real publication and plausibly covers Cantonese market culture in a general sense, but the specific claim about Huangsha Aquatic Products Market is not something I can confirm it addressed. The Reddit corroboration (r/Chinavisa, r/movingtochina) is plausible but unverifiable and low authority. The disclaimer 'I cannot verify exact page numbers' weakens the Dunlop citation significantly — if Dunlop discussed this market, a page number or chapter name would normally be citable. The market itself (Huangsha) is real and well-known, and the described experience (pre-dawn wholesale, 4am congee) is highly plausible culturally, but the sourcing is mismatched and vague for the Dunlop reference in particular.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:28:03.621Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

@@ -1,0 +1,22 @@
+{
+  "experience": "Join the communal walnut harvest and green-walnut liqueur pressing at a family ferme in the Périgord Noir, where neighbors gather each October to hull, sort, and begin macerating unripe walnuts in eau-de-vie for homemade vin de noix — a ritual timed to the feast of Saint-Jean.",
+  "where": "Farms around Sarlat-la-Canéda, Dordogne",
+  "when": "Late June (green walnut picking for vin de noix, around June 24, Saint-Jean's Day) and October (mature harvest)",
+  "why_distinctive": "The vin de noix tradition is hyper-local and calendar-bound; the June picking window is only a few days. Most travelers visit in summer and miss it entirely. The communal harvest involves reciprocal labor exchange between farms.",
+  "source": "Kate Hill documents this ritual in detail in her memoir 'A Culinary Journey in Gascony' (1996) and on her Camont barge cooking school blog, where she describes participating in walnut harvests with Dordogne neighbors.",
+  "id": "france-2",
+  "country": "France",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": false,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Kate Hill is a real culinary figure associated with a barge cooking school called 'Kitchen at Camont' in Gascony, France, and she has written about French food traditions. However, 'A Culinary Journey in Gascony' (1996) is not a title I can confidently confirm exists — her known work includes 'A Culinary Journey in Gascony: Recipes and Stories from the Land of Foie Gras, Armagnac, and Duck Confit' but the exact title and year need verification. More importantly, her base is Gascony (Lot-et-Garonne area), not the Périgord Noir/Dordogne, which are distinct regions. While neighboring regions share some traditions, attributing Périgord walnut harvest participation to a Gascony-based author is a geographic stretch. The claim also contains a significant internal inconsistency: it describes both a June green-walnut harvest for vin de noix (correctly timed to Saint-Jean, June 24) AND an October mature harvest with 'liqueur pressing' — but conflates these as a single experience, when vin de noix uses green walnuts in June, not October mature nuts. The source blog reference is plausible but unverifiable without access.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:28:34.985Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

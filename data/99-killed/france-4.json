@@ -1,0 +1,22 @@
+{
+  "experience": "Attend the Fête de la Transhumance in Saint-Rémy-de-Provence, where shepherds lead thousands of merino sheep through the town center on their way to summer Alpine pastures — then share a breakfast of fresh fromage de brebis, lavender honey, and rosé with the shepherds in the square.",
+  "where": "Saint-Rémy-de-Provence, Bouches-du-Rhône",
+  "when": "Whit Monday (Lundi de Pentecôte), late May or early June",
+  "why_distinctive": "The transhumance is a genuine working pastoral event, not a staged performance. The informal shepherd breakfast is unscheduled and happens organically when locals bring food to the drovers — not mentioned in tourist itineraries.",
+  "source": "Peter Mayle describes the transhumance in 'Toujours Provence' (1991), and the shepherd breakfast ritual is documented in a 2019 feature by food writer Rosa Jackson in 'Saveur' magazine.",
+  "id": "france-4",
+  "country": "France",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": false,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Two separate sources cited, with mixed credibility. Peter Mayle's 'Toujours Provence' (1991) is a real and recognized book about life in Provence, and it's plausible he mentions transhumance — however, I have no specific knowledge that this book covers it, and the transhumance route through Saint-Rémy is associated more with Arles-area traditions. The second source is more problematic: Rosa Jackson is a real food writer based in France known for culinary tours in Nice, but I cannot verify a 2019 Saveur feature by her on shepherd breakfast rituals at this specific event, and Saveur as a publication is real but this article is unverifiable. The 'shepherd breakfast ritual' detail (fromage de brebis, lavender honey, rosé in the square) is highly specific and vivid — possibly embellished or fabricated as a romanticized detail. The Fête de la Transhumance does occur in Saint-Rémy-de-Provence on Whit Monday, so the core event is real, but the specific 'breakfast with shepherds' ritual as a documented tradition is unverified. Splitting the citation across two sources — one real book, one unverifiable magazine article — is a pattern sometimes used to lend false credibility.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:28:52.249Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}

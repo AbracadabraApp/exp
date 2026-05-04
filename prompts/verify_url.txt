@@ -1,0 +1,33 @@
+You are verifying a travel experience claim against its cited source.
+
+The claim:
+Experience: {experience}
+Where: {where}
+When: {when}
+Why distinctive: {why_distinctive}
+Cited source: {source}
+
+The source page content:
+{page_content}
+
+Evaluate whether the cited source actually supports the claim. Use these categories:
+
+VERIFIED — The source page clearly describes the experience as claimed. Specific details (where, when, what happens) are present in the source.
+
+PARTIALLY_VERIFIED — The source mentions the experience but key details differ, are missing, or are weaker than claimed. Examples: source describes the place but not the specific ritual; source mentions the activity but not the time/setting claimed; source treats it as one option among many rather than distinctive.
+
+UNVERIFIABLE — The source does not describe the claimed experience, the page is unrelated, the page is generic travel marketing without specific support, or the source content cannot be matched to the claim.
+
+FABRICATED — The claim describes details not present in the source, or the source contradicts the claim.
+
+Return a JSON object:
+{
+  "verdict": "VERIFIED" | "PARTIALLY_VERIFIED" | "UNVERIFIABLE" | "FABRICATED",
+  "evidence": "Direct quote or paraphrase from the source that supports or contradicts the claim. Maximum 30 words.",
+  "discrepancies": "If PARTIALLY_VERIFIED or FABRICATED, list specifically what differs between claim and source. If VERIFIED, leave empty.",
+  "confidence": "high" | "medium" | "low"
+}
+
+Be strict. Travel marketing copy that mentions a place generically does not verify a specific experience claim. The source must support the specific details of the claim, not just the general topic.
+
+Return only the JSON object. No preamble, no explanation.

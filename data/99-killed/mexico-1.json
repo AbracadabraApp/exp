@@ -1,0 +1,22 @@
+{
+  "experience": "Attend the pre-dawn mole negro preparation at Teotitlán del Valle market, where abueleras grind dried chilhuacle negro and mulato chiles on communal stone metates before sunrise, a practice tied to wedding and funeral feast preparation that visitors can observe and participate in by arriving before 5am on weekends",
+  "where": "Teotitlán del Valle, Oaxaca — the covered mercado and surrounding home kitchens",
+  "when": "Weekend mornings, roughly 4:30–7am, peak season around Día de Muertos and local wedding season (spring and fall)",
+  "why_distinctive": "The communal metate grinding is a pre-Hispanic preparation ritual that has largely disappeared even in Oaxaca City; the village preserves it specifically for ceremonial moles rather than commercial production",
+  "source": "Documented in Zarela Martinez's 'Food from My Heart' (1992) and revisited in detail in Diana Kennedy's field notes published in 'Oaxaca al Gusto' (2010), pp. 47–52, where Kennedy describes arriving before dawn to observe the grinding sequence",
+  "id": "mexico-1",
+  "country": "Mexico",
+  "pass2_verified": false,
+  "pass2_verdict": "WEAK",
+  "pass2_verification": {
+    "verdict": "WEAK",
+    "source_recognized": true,
+    "topic_match": "weak",
+    "specificity": "high",
+    "concerns": "Both authors are real and credible: Zarela Martinez is a known Mexican food authority and 'Food from My Heart' (1992) is a real book, though it focuses primarily on her personal story and recipes rather than Oaxacan field documentation. Diana Kennedy is a genuine authority on Mexican regional cuisine and 'Oaxaca al Gusto' (2010) is a real book. However, the specific page citation (pp. 47–52) describing a pre-dawn grinding sequence at Teotitlán del Valle cannot be verified, and the pairing of both sources to support a single highly specific experiential claim is suspicious. Kennedy's 'Oaxaca al Gusto' does cover Oaxacan ingredients and preparations in detail, so some coverage of mole negro preparation is plausible, but the claim's specificity about communal pre-dawn metate grinding as a tourist-observable practice at a market before 5am on weekends is not the type of content typically documented in either book. The experience itself (pre-dawn communal mole preparation open to visitors) lacks corroboration from more obvious sources like food tourism operators or ethnographic studies. The combination of two well-known but somewhat mismatched sources used together to validate a very specific experiential claim raises fabrication concerns for the citation details if not the sources themselves.",
+    "needs_human_check": true
+  },
+  "pass2_timestamp": "2026-05-04T15:29:47.585Z",
+  "killed_at_pass": "pass2",
+  "kill_reason": "weak"
+}
